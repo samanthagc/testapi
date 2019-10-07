@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Test API</string>
+    <string name="title_return_id">Title</string>
+    <string name="body_return_id">Here will be the body of the API\'s return</string>
+    <string name="id_return_id">message #</string>
+    <string name="user_id_return_id">user #</string>
+    <string name="hifen">-</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:text="@string/title_return_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_return"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+        <TextView
+                android:text="@string/body_return_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/body_return"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:textColor="@android:color/black" android:textSize="18sp"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:text="@string/id_return_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_return"/>
+
+            <TextView
+                    android:text="@string/hifen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hifen"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"/>
+
+            <TextView
+                    android:text="@string/user_id_return_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_id_return"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
