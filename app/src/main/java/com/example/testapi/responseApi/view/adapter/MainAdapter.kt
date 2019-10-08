@@ -1,4 +1,4 @@
-package com.example.testapi.adapter
+package com.example.testapi.responseApi.view.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.testapi.R
-import com.example.testapi.model.ResponseAPI
+import com.example.testapi.responseApi.model.ResponseAPI
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class MainAdapter(

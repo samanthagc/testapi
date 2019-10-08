@@ -1,4 +1,4 @@
-package com.example.testapi.model
+package com.example.testapi.responseApi.model
 
 class ResponseAPI(val userId :Int,
                   val id : Int,

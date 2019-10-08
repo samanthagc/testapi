@@ -1,6 +1,6 @@
-package com.example.testapi.retrofit
+package com.example.testapi.network
 
-import com.example.testapi.retrofit.service.ResponseService
+import com.example.testapi.service.ResponseService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
