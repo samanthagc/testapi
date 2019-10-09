@@ -3,6 +3,7 @@ package com.example.testapi.responseApi.view
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.StaggeredGridLayoutManager
+import android.view.View
 import com.example.testapi.R
 import com.example.testapi.responseApi.MainContract
 import com.example.testapi.responseApi.model.ResponseAPI
@@ -28,14 +29,10 @@ class MainActivity : AppCompatActivity(), MainContract.MainView {
 
     }
 
-    override fun showLoading() {
-
-    }
-
     override fun hideLoading() {
+        pb_loading.visibility = View.GONE
 
     }
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

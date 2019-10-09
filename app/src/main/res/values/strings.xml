@@ -5,4 +5,5 @@
     <string name="id_return_id">message #</string>
     <string name="user_id_return_id">user #</string>
     <string name="hifen">-</string>
+    <string name="aguarde">Aguarde...</string>
 </resources>
