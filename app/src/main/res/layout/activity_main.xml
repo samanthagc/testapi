@@ -7,6 +7,8 @@
         tools:context=".responseApi.view.MainActivity"
         android:orientation="vertical">
 
+    <include layout="@layout/login_data"/>
+
     <android.support.v7.widget.RecyclerView
             android:id="@+id/list_return"
             android:scrollbars="vertical"
