@@ -15,7 +15,7 @@ class MainPresenter(val mainView: MainContract.MainView , private val mainRepo: 
     override fun getListApi() {
         launch {
             try{
-                val list =  mainRepo.getList()
+                val list = mainRepo.getList()
                 setListView(list)
             }catch (e : Exception) {
                 Log.i("Erro" , e.message)
