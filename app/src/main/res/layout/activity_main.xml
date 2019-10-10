@@ -3,11 +3,20 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".responseApi.view.MainActivity"
         android:orientation="vertical">
 
-    <include layout="@layout/login_data"/>
+    <!--<include layout="@layout/login_data"/>-->
+
+    <com.example.testapi.responseApi.view.customView.DataLoginView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:name="Nome: "
+            app:nickname="Apelido: "
+            android:layout_margin="8dp"
+
+    />
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/list_return"

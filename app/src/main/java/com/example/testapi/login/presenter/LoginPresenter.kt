@@ -14,6 +14,7 @@ class LoginPresenter(private val loginView: LoginContract.LoginView) : LoginCont
         when (isDataValid(name, nickname)){
             0 -> loginView.getLoginError("O nome deve ser preenchido.")
             1 -> loginView.getLoginError("O apelido deve ser preenchido")
+            2 -> loginView.getLoginError("O apelido deve ser curto")
             -1 -> loginView.getLoginSucess(login)
         }
 
@@ -24,6 +25,8 @@ class LoginPresenter(private val loginView: LoginContract.LoginView) : LoginCont
             0 //campo nome nulo
         } else if (TextUtils.isEmpty(nickname)){
             1 //campo apelido nulo
+        } else if (nickname.length > 12){
+            2 //apelido exagerado
         } else -1
     }
 
