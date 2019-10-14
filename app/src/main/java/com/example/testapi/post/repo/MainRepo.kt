@@ -1,4 +1,4 @@
-package com.example.testapi.responseApi.repo
+package com.example.testapi.post.repo
 
 import com.example.testapi.network.RetrofitInitializer
 import kotlinx.coroutines.Dispatchers
@@ -8,7 +8,7 @@ class MainRepo {
 
     suspend fun getList() =
         withContext(Dispatchers.IO)  {
-            RetrofitInitializer().responseService().list()
+            RetrofitInitializer().postService().list()
         }
 
 }

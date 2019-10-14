@@ -5,12 +5,12 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".detailResponse.view.DetailResponseActivity">
+        tools:context=".detailPost.view.DetailPostActivity">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/title_detail_response"
+            android:id="@+id/title_detail_post"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"
@@ -42,20 +42,20 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/id_detail_response"
+                android:id="@+id/id_detail_post"
                 android:layout_weight="1"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/user_id_detail_response"
+                android:id="@+id/user_id_detail_post"
                 android:layout_weight="1"/>
     </LinearLayout>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/body_detail_response"
+            android:id="@+id/body_detail_post"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/title_detail_response"
+            app:layout_constraintTop_toBottomOf="@+id/title_detail_post"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"

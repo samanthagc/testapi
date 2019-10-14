@@ -1,9 +1,9 @@
-package com.example.testapi.responseApi.presenter
+package com.example.testapi.post.presenter
 
 import android.util.Log
-import com.example.testapi.responseApi.MainContract
-import com.example.testapi.responseApi.model.ResponseAPI
-import com.example.testapi.responseApi.repo.MainRepo
+import com.example.testapi.post.MainContract
+import com.example.testapi.post.model.Post
+import com.example.testapi.post.repo.MainRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -15,7 +15,6 @@ class MainPresenter(val mainView: MainContract.MainView , private val mainRepo: 
     override fun onItemInteraction(position: Int) {
         launch {
             try {
-//                val responseAPI = mainRepo.getItemSelected(position)
                 setItemView(position)
             } catch (e: Exception) {
                 Log.i("Erro" , e.message)
@@ -35,7 +34,7 @@ class MainPresenter(val mainView: MainContract.MainView , private val mainRepo: 
         }
     }
 
-    suspend fun setListView(list : List<ResponseAPI>){
+    suspend fun setListView(list : List<Post>){
         withContext(Dispatchers.Main) {
             mainView.getList(list)
             mainView.hideLoading()

@@ -1,14 +1,14 @@
-package com.example.testapi.detailResponse.repo
+package com.example.testapi.detailPost.repo
 
 import com.example.testapi.network.RetrofitInitializer
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class DetailResponseRepo {
+class DetailPostRepo {
 
     suspend fun getItemSelected(idItem : Int) =
         withContext(Dispatchers.IO){
-            RetrofitInitializer().responseService().responseById(idItem)
+            RetrofitInitializer().postService().responseById(idItem)
         }
 
 }

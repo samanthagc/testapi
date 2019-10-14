@@ -1,4 +1,4 @@
-package com.example.testapi.responseApi.view.adapter
+package com.example.testapi.post.view.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.testapi.R
-import com.example.testapi.responseApi.model.ResponseAPI
+import com.example.testapi.post.model.Post
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class MainAdapter(
-    private val responses: List<ResponseAPI>,
+    private val posts: List<Post>,
     private val context: Context,
     itemListener: RecyclerViewClickListener?
     ) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
@@ -23,13 +23,13 @@ class MainAdapter(
     }
 
     override fun getItemCount(): Int {
-        return responses.size
+        return posts.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val response = responses[position]
+        val post = posts[position]
 
-        holder.bindView(response)
+        holder.bindView(post)
     }
 
     interface RecyclerViewClickListener {
@@ -38,11 +38,11 @@ class MainAdapter(
 
     companion object{
         var itemClickListener: RecyclerViewClickListener? = null
-        var responseSearchList:List<ResponseAPI>? = null
+        var postSearchList:List<Post>? = null
     }
 
     init {
-        responseSearchList = responses
+        postSearchList = posts
         itemClickListener = itemListener
     }
 
@@ -52,7 +52,7 @@ class MainAdapter(
         var id: TextView
         var title: TextView
         var body: TextView
-        var idResponseApi : Int = 0
+        var idPost : Int = 0
 
         init {
             userId = v.user_id_return
@@ -63,15 +63,15 @@ class MainAdapter(
         }
 
         override fun onClick(view: View?) {
-            itemClickListener?.recyclerViewListClicked(view, idResponseApi)
+            itemClickListener?.recyclerViewListClicked(view, idPost)
         }
 
-        fun bindView(responseAPI: ResponseAPI) {
-            userId.text = "user ${responseAPI.userId}"
-            id.text = "message ${responseAPI.id}"
-            title.text = responseAPI.title
-            body.text = responseAPI.body
-            idResponseApi = responseAPI.id
+        fun bindView(post: Post) {
+            userId.text = "user ${post.userId}"
+            id.text = "message ${post.id}"
+            title.text = post.title
+            body.text = post.body
+            idPost = post.id
         }
 
     }

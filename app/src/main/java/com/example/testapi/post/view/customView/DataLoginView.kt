@@ -1,4 +1,4 @@
-package com.example.testapi.responseApi.view.customView
+package com.example.testapi.post.view.customView
 
 import android.content.Context
 import android.util.AttributeSet

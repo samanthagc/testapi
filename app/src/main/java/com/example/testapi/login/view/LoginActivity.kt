@@ -8,7 +8,7 @@ import com.example.testapi.R
 import com.example.testapi.login.LoginContract
 import com.example.testapi.login.model.Login
 import com.example.testapi.login.presenter.LoginPresenter
-import com.example.testapi.responseApi.view.MainActivity
+import com.example.testapi.post.view.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), LoginContract.LoginView {

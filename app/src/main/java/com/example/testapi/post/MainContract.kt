@@ -1,15 +1,15 @@
-package com.example.testapi.responseApi
+package com.example.testapi.post
 
 import com.example.testapi.arch.BasePresenter
 import com.example.testapi.arch.BaseView
-import com.example.testapi.responseApi.model.ResponseAPI
+import com.example.testapi.post.model.Post
 
 interface MainContract {
 
 
     interface MainView : BaseView {
 
-        fun getList(list : List<ResponseAPI>)
+        fun getList(list : List<Post>)
         fun getItemSelected(position: Int)
 
     }

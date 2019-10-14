@@ -6,7 +6,7 @@ import android.support.test.espresso.matcher.RootMatchers.withDecorView
 import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import com.example.testapi.R
-import com.example.testapi.responseApi.view.MainActivity
+import com.example.testapi.post.view.MainActivity
 import org.hamcrest.Matchers.not
 
 class MainActivityRobot{
