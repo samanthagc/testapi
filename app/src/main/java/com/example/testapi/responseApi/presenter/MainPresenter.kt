@@ -12,6 +12,18 @@ class MainPresenter(val mainView: MainContract.MainView , private val mainRepo: 
     mainView
 ) {
 
+    override fun onItemInteraction(position: Int) {
+        launch {
+            try {
+//                val responseAPI = mainRepo.getItemSelected(position)
+                setItemView(position)
+            } catch (e: Exception) {
+                Log.i("Erro" , e.message)
+            }
+        }
+
+    }
+
     override fun getListApi() {
         launch {
             try{
@@ -27,6 +39,12 @@ class MainPresenter(val mainView: MainContract.MainView , private val mainRepo: 
         withContext(Dispatchers.Main) {
             mainView.getList(list)
             mainView.hideLoading()
+        }
+    }
+
+    suspend fun setItemView(position: Int){
+        withContext(Dispatchers.Main){
+            mainView.getItemSelected(position)
         }
     }
 

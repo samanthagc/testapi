@@ -10,6 +10,7 @@ interface MainContract {
     interface MainView : BaseView {
 
         fun getList(list : List<ResponseAPI>)
+        fun getItemSelected(position: Int)
 
     }
 
@@ -18,6 +19,7 @@ interface MainContract {
     ) : BasePresenter<MainView>(mainView){
 
         abstract fun getListApi()
+        abstract fun onItemInteraction(position: Int)
     }
 
 
