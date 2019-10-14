@@ -14,7 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class DetailResponseActivity : AppCompatActivity(), DetailResponseContract.DetailResponseView {
 
-
     private val presenter : DetailResponseContract.DetailResponsePresenter by lazy{
         DetailResponsePresenter(this, DetailResponseRepo())
     }
@@ -36,9 +35,24 @@ class DetailResponseActivity : AppCompatActivity(), DetailResponseContract.Detai
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        updateToolbar()
+
         setContentView(R.layout.activity_detail_response)
         idResponseAPI = intent.getIntExtra("idItem",0)
 
         presenter.onItemInteraction(idResponseAPI)
     }
+
+    private fun updateToolbar() {
+        val actionbar = supportActionBar
+        actionbar!!.title = "Post"
+        actionbar.setDisplayHomeAsUpEnabled(true)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }
